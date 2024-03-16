@@ -47,13 +47,13 @@ function removeEmployee(id){
         <br></br>
         <h2 className='text-center'>List Of Employees</h2>
         
-        <table className='table table-striped table-bordered'>
+        <table className='table table-striped table-bordered table-hover'>
             <thead className='table-dark'>
                 <tr>
-                    <th>EmployeeID</th>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>EmailID</th>
+                    <th>Employee ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email ID</th>
                     <th>Actions</th>
                 </tr>
             </thead>

@@ -82,7 +82,7 @@ const EmployeeComponent = () => {
         if(email.trim()){
             errorsCopy.email = '';
         }else{
-            errorsCopy.email = 'email ID is required';
+            errorsCopy.email = 'Email ID is required';
             valid = false;
         }       
 
@@ -112,15 +112,18 @@ const EmployeeComponent = () => {
                         <label className='form-label'>First Name</label>
                         <input 
                             type='text'
+                           
                             placeholder='Enter Employee First Name'
                             name='firstName'
                             value={firstName}
                             className={`form-control ${errors.firstName ? 'is-invalid':''}`}
+                           
                             onChange={(e) => setFirstName(e.target.value)}
                         >
                         </input>
                         {errors.firstName && <div className='invalid-feedback'> {errors.firstName}</div>}
                     </div>
+
                     <div className='form-group mb-2'>
                         <label className='form-label'>Last Name</label>
                         <input 
@@ -134,10 +137,11 @@ const EmployeeComponent = () => {
                         </input>
                         {errors.lastName && <div className='invalid-feedback'> {errors.lastName}</div>}
                     </div>
+
                     <div className='form-group mb-2'>
                         <label className='form-label'>Email ID</label>
                         <input 
-                            type='text'
+                            type='email'
                             placeholder='Enter Employee Email ID'
                             name='email'
                             value={email}
@@ -147,6 +151,7 @@ const EmployeeComponent = () => {
                         </input>
                         {errors.email && <div className='invalid-feedback'> {errors.email}</div>}
                     </div>
+
                     <button className='btn btn-success' onClick={saveOrUpdateEmployee}>Submit</button>
                 </form>
             </div>
